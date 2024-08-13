@@ -1,0 +1,41 @@
+{{!TEMPLATE
+
+://TITLE Test Recipe
+:BANNER +Farm.800.10x1 Test Recipe
+:THEMECOLOR #204D1A
+
+Our first standalone recipe for a mobile app.
+
+$twilio type SECRET
+$twilio title Twilio SID
+$twilio note Enter the Twilio SID for the app.
+$twilio placeholder Twilio Name
+$twilio default My App
+$twilio icon gg:twilio
+
+$padding title Padding for App
+$padding type RANGE
+$padding min 100
+$padding max 500
+
+}}
+
+//:recipe blank
+//:title Blank Mobile
+//:version local
+//:name {{appname}}
+//:description {{description}}
+//:color {{color}}
+//:font {{myfont}}
+//:header-font Anton SC
+//:icon {{appicon}}
+//:manifest
+//:pwa
+//:admin-passcode 6464
+//:edit-passcode 6464
+//:access-passcode 2222
+//:ttl 30
+
+{{#if twilio}}//:secret {{twilio.name}} {{twilio.value}}{{/if}}
+
+
